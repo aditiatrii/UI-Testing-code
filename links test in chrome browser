@@ -1,0 +1,108 @@
+Code for testing the links in Chrome Browser
+
+package URL_Test;
+import java.io.File;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.io.FileHandler;
+
+public class ChromeBrowser {
+	
+	public static void main(String[]args) throws Throwable {
+		
+		 int[][] resolutions = { {1920,1080}};
+	        String[] browsers = { "Chrome"};
+		
+		WebDriver driver =new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		
+		driver.get(" https://www.getcalley.com/page-sitemap.xml");
+	
+	driver.findElement(By.xpath("//a[@href='https://www.getcalley.com/']")).click();	
+		
+     Thread.sleep(1000);
+     
+     TakesScreenshot screenshot1 = (TakesScreenshot)driver;
+ 	
+ 	File pageshot1 = screenshot1.getScreenshotAs(OutputType.FILE);
+ 	
+ 	File page1= new File("C:\\Users\\atris\\Desktop\\New folder/ChromeScreenpage1.png");
+ 	
+ 	FileHandler.copy(pageshot1, page1);
+ 	
+ 	Thread.sleep(1000);
+	
+	driver.navigate().back();
+	
+	driver.findElement(By.xpath("//a[@href='https://www.getcalley.com/calley-call-from-browser/']")).click();
+		
+	Thread.sleep(1000);
+	
+	 TakesScreenshot screenshot2 = (TakesScreenshot)driver;
+	 	
+	 	File pageshot2 = screenshot2.getScreenshotAs(OutputType.FILE);
+	 	
+	 	File page2= new File("C:\\Users\\atris\\Desktop\\New folder/ChromeScreenpage2.png");
+	 	
+	 	FileHandler.copy(pageshot2, page2);
+	 	
+	 	Thread.sleep(1000);
+		
+	driver.navigate().back();
+	
+	driver.findElement(By.xpath("//a[@href='https://www.getcalley.com/calley-pro-features/']")).click();
+
+	Thread.sleep(1000);
+	
+	 TakesScreenshot screenshot3 = (TakesScreenshot)driver;
+	 	
+	 	File pageshot3 = screenshot3.getScreenshotAs(OutputType.FILE);
+	 	
+	 	File page3= new File("C:\\Users\\atris\\Desktop\\New folder/ChromeScreenpage3.png");
+	 	
+	 	FileHandler.copy(pageshot3, page3);
+	 	
+	 	Thread.sleep(1000);
+
+	
+	driver.navigate().back();
+	
+	driver.findElement(By.xpath("//a[@href='https://www.getcalley.com/best-auto-dialer-app/']")).click();
+
+     Thread.sleep(1000);
+     
+     TakesScreenshot screenshot4 = (TakesScreenshot)driver;
+	 	
+	 	File pageshot4 = screenshot4.getScreenshotAs(OutputType.FILE);
+	 	
+	 	File page4= new File("C:\\Users\\atris\\Desktop\\New folder/ChromeScreenpage4.png");
+	 	
+	 	FileHandler.copy(pageshot4, page4);
+	 	
+	 	Thread.sleep(1000);
+
+	
+	driver.navigate().back();
+	
+	driver.findElement(By.xpath("//a[@href='https://www.getcalley.com/how-calley-auto-dialer-app-works/']")).click();
+
+	 TakesScreenshot screenshot5 = (TakesScreenshot)driver;
+	 	
+	 	File pageshot5 = screenshot5.getScreenshotAs(OutputType.FILE);
+	 	
+	 	File page5= new File("C:\\Users\\atris\\Desktop\\New folder/ChromeScreenpage5.png");
+	 	
+	 	FileHandler.copy(pageshot5, page5);
+	 	
+	 	Thread.sleep(1000);
+	 	
+	 	driver.quit();
+	 	
+	 		
+	}
+
+}
