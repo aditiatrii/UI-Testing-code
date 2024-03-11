@@ -1,0 +1,109 @@
+
+package URL_Test;
+
+import java.io.File;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.io.FileHandler;
+
+public class FireFoxBrowser {
+	
+	public static void main(String[]args) throws Throwable {
+		
+		 int[][] resolutions = { {1920,1080}};
+	        String[] browsers = { "firefox"};
+		
+		WebDriver driver =new FirefoxDriver();
+		
+		driver.get(" https://www.getcalley.com/page-sitemap.xml");
+		
+		Thread.sleep(1000);
+		
+		driver.findElement(By.linkText("https://www.getcalley.com/")).click();
+		
+		Thread.sleep(1000);
+		
+		 TakesScreenshot screenshot1 = (TakesScreenshot)driver;
+		 	
+		 	File shot1 = screenshot1.getScreenshotAs(OutputType.FILE);
+		 	
+		 	File link1= new File("C:\\Users\\atris\\Desktop\\New folder/FireFoxBrowserScreenpageLink1.png");
+		 	
+		 	FileHandler.copy(shot1, link1);
+		 	
+		 	Thread.sleep(1000);
+		
+		driver.navigate().back();
+		
+		driver.findElement(By.linkText("https://www.getcalley.com/calley-call-from-browser/")).click();
+			
+		Thread.sleep(1000);
+		
+         TakesScreenshot screenshot2 = (TakesScreenshot)driver;
+	 	
+	 	File shot2 = screenshot2.getScreenshotAs(OutputType.FILE);
+	 	
+	 	File link2= new File("C:\\Users\\atris\\Desktop\\New folder/FireFoxBrowserScreenpageLink2.png");
+	 	
+	 	FileHandler.copy(shot2, link2);
+	 	
+	 	Thread.sleep(1000);
+			
+		driver.navigate().back();
+		
+		driver.findElement(By.linkText("https://www.getcalley.com/calley-pro-features/")).click();
+
+		Thread.sleep(1000);
+		
+		 TakesScreenshot screenshot3 = (TakesScreenshot)driver;
+		 	
+		 	File shot3 = screenshot3.getScreenshotAs(OutputType.FILE);
+		 	
+		 	File link3= new File("C:\\Users\\atris\\Desktop\\New folder/FireFoxBrowserScreenpageLink3.png");
+		 	
+		 	FileHandler.copy(shot3, link3);
+		 	
+		 	Thread.sleep(1000);
+		
+		driver.navigate().back();
+		
+		driver.findElement(By.linkText("https://www.getcalley.com/best-auto-dialer-app/")).click();
+
+	Thread.sleep(1000);
+	
+	 TakesScreenshot screenshot4 = (TakesScreenshot)driver;
+	 	
+	 	File shot4 = screenshot4.getScreenshotAs(OutputType.FILE);
+	 	
+	 	File link4= new File("C:\\Users\\atris\\Desktop\\New folder/FireFoxBrowserScreenpageLink4.png");
+	 	
+	 	FileHandler.copy(shot4, link4);
+	 	
+	 	Thread.sleep(1000);
+		
+		driver.navigate().back();
+		
+		driver.findElement(By.linkText("https://www.getcalley.com/how-calley-auto-dialer-app-works/")).click();
+
+		 TakesScreenshot screenshot5 = (TakesScreenshot)driver;
+		 	
+		 	File shot5 = screenshot5.getScreenshotAs(OutputType.FILE);
+		 	
+		 	File link5= new File("C:\\Users\\atris\\Desktop\\New folder/FireFoxBrowserScreenpageLink5.png");
+		 	
+		 	FileHandler.copy(shot5, link5);
+		 	
+		 	Thread.sleep(1000);
+		 	
+		 	driver.quit();
+			
+		}
+		
+
+	}
+
+
+
